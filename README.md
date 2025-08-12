@@ -92,7 +92,7 @@ cd FirstAPI
 ### 2️⃣ Backend Setup (Spring Boot)
 
 ```bash
-cd backend
+cd hello-world-spring
 ./mvnw spring-boot:run
 ```
 
@@ -103,7 +103,7 @@ The backend will be running on: `http://localhost:8080`
 Open a new terminal:
 
 ```bash
-cd frontend
+cd my-frontend-angular
 npm install
 ng serve
 ```
