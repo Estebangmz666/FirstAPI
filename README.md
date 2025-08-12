@@ -13,7 +13,6 @@
 - [🛠 Tech Stack](#-tech-stack)
 - [📁 Project Structure](#-project-structure)
 - [🚀 Getting Started](#-getting-started)
-- [📸 Screenshots](#-screenshots)
 - [🔗 API Endpoints](#-api-endpoints)
 - [🎯 Learning Objectives](#-learning-objectives)
 - [👨‍💻 Author](#-author)
