@@ -1,0 +1,77 @@
+<div class="container">
+  <h1>My First FullStack Project!</h1>
+
+  <div class="buttons">
+    <button (click)="getGreeting()" class="main-button">
+      Get Greeting from Spring Boot!
+    </button>
+
+    <button (click)="getHello()" class="secondary-button">
+      Get Hello World!
+    </button>
+  </div>
+
+  <div class="personalized-section">
+    <h3>🎭 Personalized Greeting</h3>
+    <input
+      [(ngModel)]="username"
+      placeholder="Write your name here..."
+      class="name-input"
+    />
+    <button (click)="getPersonalizedGreeting()" class="personalized-button">
+      Get My Greeting!
+    </button>
+  </div>
+
+  <div *ngIf="message" class="message">
+    <h2>📨 Backend Response:</h2>
+    <p [innerHTML]="message"></p>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    <p>🔄 Loading from Spring Boot...</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    <p>❌ Error: {{ error }}</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <div class="contact-item email-item">
+        <a href="mailto:estebangumy05@gmail.com">estebangumy05@gmail.com</a>
+      </div>
+      <div class="contact-item github-item">
+        <a href="https://github.com/estebangmz666" target="_blank">GitHub</a>
+      </div>
+      <div class="contact-item linkedin-item">
+        <a href="https://linkedin.com/in/znotkayn" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>About</h3>
+      <p>
+        Test page developed to explore and learn modern web development technologies.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-badge">Angular</span>
+        <span class="tech-badge">Spring Boot</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Java</span>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Developer</h3>
+      <p><strong>Esteban Gomez Leon</strong></p>
+      <p>
+        Full Stack dev passionate about creating innovative solutions
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Esteban Gomez Leon. Developed to learn</p>
+  </div>
+</footer>
