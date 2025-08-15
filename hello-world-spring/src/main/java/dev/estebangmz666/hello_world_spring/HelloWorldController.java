@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class HelloWorldController {
+
+    private User TEST_USER = new User("John Doe", "johndoe@gmail.com", 18, FavoriteProgrammingLanguage.Java,true);
     
     @GetMapping("/hello")
     public String greetWorld() {
@@ -26,11 +28,11 @@ public class HelloWorldController {
 
     @GetMapping("/hello/{name}")
     public String personalizedGreeting(@PathVariable String name){
-        return "¡Hello " + name + "!Welcome to my very very own API (Its Mine, I made it >:3)!";
+        return "¡Hello " + name + "! Welcome to my very very own API (Its Mine, I made it >:3)!";
     }
 
     @GetMapping("/user")
     public User getUser() {
-        return new User("Esteban", "estebangumy05@gmail.com", 19, FavoriteProgrammingLanguage.JAVA, true);
+        return TEST_USER;
     }
 }

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FavoriteProgrammingLanguage } from './FavoriteProgramingLanguage';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,10 @@ export class AppComponent {
   loading: boolean = false;
   error: string = '';
   username: String = "";
+  name: String ="";
+  email: String="";
+  age: Number=0;
+  favoriteProgrammingLanguage: FavoriteProgrammingLanguage=0;
 
   getGreeting() {
     this.clearStatus();
@@ -29,7 +34,7 @@ export class AppComponent {
           this.loading = false;
         },
         error: (error) => {
-          this.error = 'Could not connect to SpringBoot. Is it running on port 8080?';
+          this.error = 'No se pudo conectar con Spring Boot. ¿Está ejecutándose en puerto 8080?';
           this.loading = false;
         }
       });
@@ -77,5 +82,26 @@ export class AppComponent {
         this.loading = false;
       }
     });
+  }
+
+  getTestUser(){
+    this.clearStatus();
+    this.loading = true;
+
+    this.http.get(`http://localhost:8080/user`, {responseType: `json`}).subscribe({
+      next: (answer: any) => {
+        console.log(answer);
+        this.message = `Name: ${answer.name}, Email: ${answer.email}, Age: ${answer.age}, Favorite Language: ${answer.favoriteProgrammingLanguage}`;
+        this.loading = false;
+      },
+      error: (error) => {
+        this.error = `Could not get Test User`;
+        this.loading = false;
+      }
+    })
+  }
+
+  signupUser(){
+    return 0;
   }
 }
