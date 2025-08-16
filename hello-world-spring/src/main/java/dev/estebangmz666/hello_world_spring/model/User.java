@@ -22,8 +22,8 @@ public class User {
     @NotBlank(message = "Name is required")
     private String name;
 
-    @NotBlank(message = "Valid email is required")
-    @Email(message = "Valid email is required")
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email must be valid")
     private String email;
 
     @NotNull(message ="Age is required")

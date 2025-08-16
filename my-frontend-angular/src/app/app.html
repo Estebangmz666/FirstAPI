@@ -10,14 +10,12 @@
       <h1>FullStack Project</h1>
 
       <div class="buttons">
-        <button (click)="getGreeting()" class="main-button">
+        <button (click)="getWelcomeMessage()" class="main-button">
           Retrieve Greeting from Spring Boot
         </button>
-
-        <button (click)="getHello()" class="secondary-button">
+        <button (click)="getHelloMessage()" class="secondary-button">
           Retrieve Hello World
         </button>
-
         <button (click)="getTestUser()" class="personalized-button-2">
           Retrieve Test User from Spring Boot
         </button>
@@ -25,28 +23,35 @@
 
       <div class="personalized-section">
         <h3>Personalized Greeting</h3>
-        <input
-          [(ngModel)]="username"
-          placeholder="Enter your name"
-          class="name-input"
-        />
+        <label for="personalizedName">Enter your name</label>
+        <input id="personalizedName" [(ngModel)]="personalizedName" placeholder="Enter your name" class="name-input" />
         <button (click)="getPersonalizedGreeting()" class="personalized-button">
           Submit Greeting
         </button>
       </div>
 
-      <div class="user-signup-section">
-        <h3>Sign Up</h3>
-        <input [(ngModel)]="name" placeholder="Name" class="name-input" />
-        <input [(ngModel)]="email" placeholder="Email" class="email-input" />
-        <input [(ngModel)]="age" placeholder="Age" class="age-input" />
-        <select [(ngModel)]="favoriteProgrammingLanguage" class="favoriteProgrammingLanguage-input">
-          <option value="" disabled selected>Select a programming language</option>
-          <option *ngFor="let lang of favoriteProgrammingLanguages" [value]="lang">{{ lang }}</option>
-        </select>
-        <button (click)="signupUser()" class="personalized-button">
-          Register
-        </button>
+      <div>
+        <div class="user-signup-section">
+          <h3>User Registration</h3>
+          <input [(ngModel)]="name" placeholder="Name" class="name-input" />
+          <input [(ngModel)]="email" placeholder="Email" class="email-input" />
+          <input [(ngModel)]="age" placeholder="Age" class="age-input" />
+          <select [(ngModel)]="favoriteProgrammingLanguage" class="favoriteProgrammingLanguage-input">
+            <option value="" disabled selected>Select a programming language</option>
+            <option *ngFor="let lang of favoriteProgrammingLanguages" [ngValue]="lang">{{ lang }}</option>
+          </select>
+          <button (click)="signupUser()" class="personalized-button">
+            Register
+          </button>
+        </div>
+        <div class="user-retrieve-section">
+          <h3>Get User</h3>
+          <input [(ngModel)]="selectedUserId" placeholder="User ID" class="id-input" type="number" required />
+          <button (click)="getUserById()" class="personalized-button" [disabled]="loading">
+            Get User
+          </button>
+          <p *ngIf="retrievedUser">User: {{ retrievedUser.name }}, Email: {{ retrievedUser.email }}, Age: {{ retrievedUser.age }}, Language: {{ retrievedUser.favoriteProgrammingLanguage }}</p>
+        </div>
       </div>
 
       <div *ngIf="message" class="message">
@@ -71,14 +76,10 @@
             <a href="mailto:estebangumy05@gmail.com">estebangumy05@gmail.com</a>
           </div>
           <div class="contact-item">
-            <a href="https://github.com/estebangmz666" target="_blank"
-              >GitHub</a
-            >
+            <a href="https://github.com/estebangmz666" target="_blank">GitHub</a>
           </div>
           <div class="contact-item">
-            <a href="https://linkedin.com/in/znotkayn" target="_blank"
-              >LinkedIn</a
-            >
+            <a href="https://linkedin.com/in/znotkayn" target="_blank">LinkedIn</a>
           </div>
         </div>
         <div class="footer-section">

@@ -215,3 +215,14 @@ footer {
     justify-content: center;
   }
 }
+
+.id-input {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 180px;
+}
+.user-retrieve-section {
+    margin-top: 20px;
+}

@@ -1,172 +1,55 @@
-# 🚀 My First Full Stack Adventure
+CodeQuest
+CodeQuest is a Full Stack application designed to explore and master modern web development technologies. It combines an Angular frontend with a Spring Boot backend, enabling user management and interaction with personalized messages.
+Description
+CodeQuest provides the following functionalities:
 
-> 🎯 Angular frontend + Spring Boot backend with personalized greetings, modern glassmorphism UI, and REST API integration.
+User registration with name, email, age, and favorite programming language.
+Retrieval of a test user from the backend.
+User search by ID.
+Personalized greetings and generic messages from the server.
 
-[![Angular](https://img.shields.io/badge/Angular-18-red?style=for-the-badge&logo=angular)](https://angular.io/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0+-green?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk)](https://openjdk.org/)
-
-## 📋 Table of Contents
-
-- [✨ Features](#-features)
-- [🛠 Tech Stack](#-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
-- [🔗 API Endpoints](#-api-endpoints)
-- [🎯 Learning Objectives](#-learning-objectives)
-- [👨‍💻 Author](#-author)
-
-## ✨ Features
-
-🎭 **Personalized Greetings** - Enter your name and get a custom greeting from the backend
+Technologies Used
   
-🌐 **REST API Integration** - Angular frontend consuming Spring Boot APIs
 
-🎨 **Modern UI Design** - Glassmorphism effects with gradient backgrounds
+Styling: Custom CSS
+Data Management: JPA/Hibernate
 
-📱 **Responsive Design** - Works perfectly on desktop and mobile
+Requirements
 
-⚡ **Real-time Feedback** - Loading states and error handling
+Node.js and npm (for the frontend)
+Java JDK 17+ (for the backend)
+Maven (to build the backend)
+Angular CLI (installed globally: npm install -g @angular/cli)
+Database: H2 (embedded) or configured as per application.properties
 
-🔄 **Dynamic Content** - Interactive buttons with smooth animations
+Installation
+Backend
 
-## 🛠 Tech Stack
+Clone the repository or download the backend code.
+Navigate to the backend directory and run:mvn clean install
+mvn spring-boot:run
 
-### Frontend
-- **Angular 18** - Modern web framework
-- **TypeScript** - Type-safe JavaScript
-- **CSS3** - Custom styling with modern effects
-- **RxJS** - Reactive programming
 
-### Backend  
-- **Spring Boot 3.0+** - Java-based backend framework
-- **Spring Web** - RESTful web services
-- **Maven** - Dependency management
-- **Java 17+** - Programming language
+Ensure the database is configured in src/main/resources/application.properties.
 
-## 📁 Project Structure
+Frontend
 
-```
-FirstAPI/
-│
-├── 📂 frontend/                    # Angular Application
-│   ├── 📂 src/
-│   │   ├── 📂 app/
-│   │   │   ├── 🟦 app.component.ts
-│   │   │   ├── 🎨 app.component.css
-│   │   │   └── 📄 app.component.html
-│   │   └── 📄 main.ts
-│   ├── 📄 package.json
-│   └── 📄 angular.json
-│
-├── 📂 backend/                     # Spring Boot Application  
-│   ├── 📂 src/
-│   │   └── 📂 main/
-│   │       └── 📂 java/
-│   │           └── 📂 com/example/demo/
-│   │               ├── 🟨 HelloWorldSpringApplication.java
-│   │               └── 🟨 HelloWorldController.java
-│   └── 📄 pom.xml
-│
-└── 📖 README.md
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have installed:
-- ☕ **Java 17+** 
-- 🟢 **Node.js 18+** & npm
-- 🅰️ **Angular CLI** (`npm install -g @angular/cli`)
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/estebangmz666/FirstAPI.git
-cd FirstAPI
-```
-
-### 2️⃣ Backend Setup (Spring Boot)
-
-```bash
-cd hello-world-spring
-./mvnw spring-boot:run
-```
-
-The backend will be running on: `http://localhost:8080`
-
-### 3️⃣ Frontend Setup (Angular)
-
-Open a new terminal:
-
-```bash
-cd my-frontend-angular
-npm install
+Clone the repository or download the frontend code.
+Navigate to the my-frontend-angular directory and run:npm install
 ng serve
-```
 
-The frontend will be running on: `http://localhost:4200`
 
-### 4️⃣ Ready to Go! 🎉
+Access the application at http://localhost:4200.
 
-Open your browser and navigate to `http://localhost:4200` to see the application in action!
+Usage
 
-## 🔗 API Endpoints
+Registration: Enter the details in the "User Registration" form and click "Register".
+Search: Enter an ID in "Get User" and click "Get User".
+Greetings: Use the buttons "Retrieve Greeting from Spring Boot", "Retrieve Hello World", or "Submit Greeting" to interact with the backend.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api` | Get a simple greeting message |
-| `GET` | `/api/hello` | Get "Hello World!" message |
-| `GET` | `/api/hello/{name}` | Get personalized greeting with name |
+Contribution
+Contributions are welcome. Please open an issue or submit a pull request with your proposals.
+Contact
 
-### Example Requests:
-
-```bash
-# Simple greeting
-curl http://localhost:8080/api
-
-# Personalized greeting
-curl http://localhost:8080/api/hello/Esteban
-```
-
-## 🎯 Learning Objectives
-
-This project was built to learn and practice:
-
-✅ **Full Stack Development** - Connecting frontend and backend  
-✅ **REST API Design** - Creating and consuming APIs  
-✅ **Modern UI/UX** - Implementing glassmorphism and animations  
-✅ **TypeScript** - Type-safe frontend development  
-✅ **Spring Boot** - Java backend development  
-✅ **CORS Configuration** - Cross-origin resource sharing  
-✅ **Responsive Design** - Mobile-first approach  
-✅ **Error Handling** - User-friendly error messages  
-
-## 🚀 Future Enhancements
-
-- 🗃️ Database integration (PostgreSQL/MySQL)
-- 📊 Data visualization with charts
-- 🧪 Unit and integration tests
-- 🐳 Docker containerization
-
-## 👨‍💻 Author
-
-**Esteban Gomez Leon**
-
-- 📧 Email: [estebangumy05@gmail.com](mailto:estebangumy05@gmail.com)
-- 💼 LinkedIn: [znotkayn](https://linkedin.com/in/znotkayn)  
-- 🐱 GitHub: [estebangmz666](https://github.com/estebangmz666)
-
----
-
-<div align="center">
-
-### ⭐ If you found this project helpful, please give it a star!
-
-**Made with 💜 for learning Full Stack Development**
-
-*This is my first full stack project - feedback and suggestions are always welcome!* 🚀
-
-</div>
+License
+© 2025 Esteban Gomez Leon. All rights reserved.
