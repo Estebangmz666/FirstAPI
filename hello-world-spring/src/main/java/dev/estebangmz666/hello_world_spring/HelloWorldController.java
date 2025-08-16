@@ -1,13 +1,13 @@
 package dev.estebangmz666.hello_world_spring;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.estebangmz666.hello_world_spring.model.FavoriteProgrammingLanguage;
 import dev.estebangmz666.hello_world_spring.model.User;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController

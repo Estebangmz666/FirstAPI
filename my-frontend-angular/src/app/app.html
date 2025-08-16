@@ -40,11 +40,10 @@
         <input [(ngModel)]="name" placeholder="Name" class="name-input" />
         <input [(ngModel)]="email" placeholder="Email" class="email-input" />
         <input [(ngModel)]="age" placeholder="Age" class="age-input" />
-        <input
-          [(ngModel)]="favoriteProgrammingLanguage"
-          placeholder="Favorite Programming Language"
-          class="favoriteProgrammingLanguage-input"
-        />
+        <select [(ngModel)]="favoriteProgrammingLanguage" class="favoriteProgrammingLanguage-input">
+          <option value="" disabled selected>Select a programming language</option>
+          <option *ngFor="let lang of favoriteProgrammingLanguages" [value]="lang">{{ lang }}</option>
+        </select>
         <button (click)="signupUser()" class="personalized-button">
           Register
         </button>
